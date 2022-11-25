@@ -1,0 +1,95 @@
+/* Define custom variables */
+:root {
+    --primaryColor: darkcyan;
+    --secondaryColor: rgb(108, 148, 148);
+    --alternativeColor: rgb(78, 124, 211);
+    --myColor: rgb(82, 54, 54);
+    --textColor:rgb(32, 51, 57);
+    /* none | h-offset (X) v-offset (Y) blur spread color |inset|initial|inherit*/
+    --mainBoxShadow: .3vw .8vw 1vw rgba(34, 49, 63,1);
+}
+/* *,
+*::before,
+*::after {
+    padding: 0;
+    box-sizing: border-box;
+} */
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.password-container {
+    background-color:var(--primaryColor) ;
+    width: 500px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 11px;
+    box-shadow:var(--mainBoxShadow) ;
+}
+/* Input Section */
+.input-container {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+/* PlaceHolder Section */
+.input::placeholder {
+    letter-spacing: 0px;
+    color: bisque;
+}
+/* Icon In Input-Container */
+.fa-copy {
+    cursor: pointer;
+    opacity: .3;
+}
+.fa-copy:hover {
+    opacity: .9;
+}
+/* Button Styling */
+.btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 10px 0;
+    font-size: 20px;
+}
+.btn:hover {
+    background-color: var(--secondaryColor);
+}
+.btn:active {
+    transform: scale(0.95);
+}
+.alert-container {
+    position: fixed;
+    width: 300px;
+    height: 60px;
+    background-color: var(--myColor);
+    right: 20px;
+    bottom: 20px;
+    border-radius: 13px;
+    box-shadow:var(--mainBoxShadow) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: 0.45s;
+}
+.active.alert-container {
+    right: -300px;
+}
