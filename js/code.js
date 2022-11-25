@@ -16,6 +16,7 @@ copyIconEl.addEventListener("click", ()=>{
         alertContainerEl.classList.add("active");
     }, 2000);
     }
+    inputEl.value = '';
 })
 // Create Function for CreatePassword //
 function createPassword(){
